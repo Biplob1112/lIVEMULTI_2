@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <com.pedro.library.view.OpenGlView
+        android:id="@+id/openGlView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="320dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <EditText
+                android:id="@+id/etYoutubeKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="YouTube stream key"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/etFacebookKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Facebook stream key"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etOverlayText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Overlay text"
+                    android:singleLine="true" />
+
+                <Button
+                    android:id="@+id/btnApplyText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apply" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnLogo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pick logo" />
+
+                <Button
+                    android:id="@+id/btnSwitch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Switch camera" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnLive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GO LIVE" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="Ready" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
